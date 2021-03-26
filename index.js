@@ -5166,7 +5166,7 @@ case 'play':
 
   try {
 
-  anu = await fetchJson(`https://api.itsmeikyxsec404.xyz/playmp3?apikey=${apikey}&query=${body.slice(6)}`, {method: 'get})
+  anu = await fetchJson(`https://api.itsmeikyxsec404.xyz/playmp3?apikey=${apikey}&query=${body.slice(6)}`, {method: 'get'})
 
   if (anu.error) return reply(anu.error)
 
