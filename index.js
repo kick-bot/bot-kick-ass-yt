@@ -2152,6 +2152,7 @@ caption: teks, contextInfo: {
 
 
 //--Info dono
+
 				case 'dono':
 
   me = Pin.user
@@ -2160,20 +2161,15 @@ caption: teks, contextInfo: {
 
   teks = `┣➢𝐍𝐎𝐌𝐄 𝐃𝐎 𝐃𝐎𝐍𝐎 : ANGELO
 ──────────────────
-
   ┣➢𝐍𝐔𝐌𝐄𝐑𝐎 𝐃𝐎 𝐃𝐎𝐍𝐎* : wa.me/556992482009
 ──────────────────
-
   ┣➢𝐃𝐎𝐍𝐎* : ☂︎𓇽𝐊𝐈𝐂𝐊-𝐀𝐒𝐒𓇽☂︎
 ──────────────────
-
   ┣➢𝐏𝐑𝐄𝐅𝐈𝐗 * : ${prefix}
 ──────────────────
-
-  ┣➢𝐂𝐓𝐓𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒* : 9
+  ┣➢𝐂𝐓𝐓𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒* : ${blocked.length}
 ──────────────────
-
-  ┣➢𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 DO DONO* : 2998`
+  ┣➢𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 DO DONO* : ${totalchat.length}`
 
   buffer = await getBuffer(me.imgUrl)
 
@@ -2187,30 +2183,27 @@ caption: teks, contextInfo: {
 
 
 
-//---Kecepatan respon
+//--ping do bot
 
-case 'ping':
+				case 'ping':
 
-  case 'speed':
+  me = Pin.user
 
-if (!isRegister) return reply(mess.only.userB)
+  uptime = process.uptime()
 
-const timestamp = speed();
+  teks = `┣➢𝐍𝐎𝐌𝐄 𝐃𝐎 𝐃𝐎𝐍𝐎 : ANGELO
+──────────────────
+╠≽ 𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄 𝐃𝐄 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄* : ${latensi.toFixed(4)} _𝐒𝐄𝐆𝐔𝐍𝐃𝐎_\n\n‣ *𝐈𝐌𝐅𝐎 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 𝐃𝐎 𝐁𝐎𝐓* : ${totalchat.length}\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐃𝐄 𝐔𝐒𝐒𝐔𝐀𝐑𝐈𝐎* : ${_registered.length}\n‣ *𝐁𝐋𝐎𝐂𝐊* : ${blocked.length}\n‣ *𝐎𝐍𝐋𝐈𝐍𝐄* : ${kyun(uptime)}`, text, {`
 
-const latensi = speed() - timestamp
+  buffer = await getBuffer(me.imgUrl)
 
-Pin.updatePresence(from, Presence.composing)
+  Pin.sendMessage(from, buffer, image, {
 
-uptime = process.uptime()
+caption: teks, contextInfo: {
 
-Pin.sendMessage(from, `*╠≽ 𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄 𝐃𝐄 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄* : ${latensi.toFixed(4)} _𝐒𝐄𝐆𝐔𝐍𝐃𝐎_\n\n‣ *𝐈𝐌𝐅𝐎 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 𝐃𝐎 𝐁𝐎𝐓* : ${totalchat.length}\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐃𝐄 𝐔𝐒𝐒𝐔𝐀𝐑𝐈𝐎* : ${_registered.length}\n‣ *𝐁𝐋𝐎𝐂𝐊* : ${blocked.length}\n‣ *𝐎𝐍𝐋𝐈𝐍𝐄* : ${kyun(uptime)}`, text, {
+  mentionedJid: [me.jid]}})
 
-  quoted: mek
-
-})
-
-break
-
+  break
 
 
 //---donasi
@@ -5132,7 +5125,7 @@ ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gamb
 
   }
 
-  teks = `SALVE O SEU ARRONBADO \nESSE E TEU INFO 👇👇 \n‣ *Nama* : ${pushname}
+  teks = `SALVE O SEU ARRONBADO \nESSE E TEU INFO 👇👇 \n‣ *NOME* : ${pushname}
 
   ‣ *TEU NOME* : ${sender.split("@")[0]}
 
