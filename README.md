@@ -8,5 +8,10 @@
 
 
 
-SE FOR KIBA DEIXA OS CRDIDOR OU A BASE QUE VC PEGO
+SE FOR KIBA DEIXA OS CREDIDOR, OU A BASE QUE VC PEGO PRA EDITA, TIPO
+
+<p align="center">
+<a href="#"><img title="Whatsapp-Bot" src="https://img.shields.io/badge/Termux Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+</p>
+
 
