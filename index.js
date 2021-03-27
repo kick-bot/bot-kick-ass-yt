@@ -2183,27 +2183,30 @@ caption: teks, contextInfo: {
 
 
 
-//--ping do bot
+//---Kecepatan respon
 
-				case 'ping':
+case 'ping':
 
-  me = Pin.user
+  case 'speed':
 
-  uptime = process.uptime()
+if (!isRegister) return reply(mess.only.userB)
 
-  teks = `┣➢𝐍𝐎𝐌𝐄 𝐃𝐎 𝐃𝐎𝐍𝐎 : ANGELO
-──────────────────
-╠≽ 𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄 𝐃𝐄 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄* : ${latensi.toFixed(4)} _𝐒𝐄𝐆𝐔𝐍𝐃𝐎_\n\n‣ *𝐈𝐌𝐅𝐎 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 𝐃𝐎 𝐁𝐎𝐓* : ${totalchat.length}\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐃𝐄 𝐔𝐒𝐒𝐔𝐀𝐑𝐈𝐎* : ${_registered.length}\n‣ *𝐁𝐋𝐎𝐂𝐊* : ${blocked.length}\n‣ *𝐎𝐍𝐋𝐈𝐍𝐄* : ${kyun(uptime)}`, text, {`
+const timestamp = speed();
 
-  buffer = await getBuffer(me.imgUrl)
+const latensi = speed() - timestamp
 
-  Pin.sendMessage(from, buffer, image, {
+Pin.updatePresence(from, Presence.composing)
 
-caption: teks, contextInfo: {
+uptime = process.uptime()
 
-  mentionedJid: [me.jid]}})
+Pin.sendMessage(from, `*╠≽ 𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄 𝐃𝐄 𝐑𝐄𝐒𝐏𝐎𝐒𝐓𝐀 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐕𝐄𝐋𝐎𝐂𝐈𝐃𝐀𝐃𝐄* : ${latensi.toFixed(4)} _𝐒𝐄𝐆𝐔𝐍𝐃𝐎_\n\n‣ *𝐈𝐌𝐅𝐎 𝐃𝐎 𝐁𝐎𝐓*\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 𝐃𝐎 𝐁𝐎𝐓* : ${totalchat.length}\n‣ *𝐓𝐎𝐓𝐀𝐋 𝐃𝐄 𝐔𝐒𝐒𝐔𝐀𝐑𝐈𝐎* : ${_registered.length}\n‣ *𝐁𝐋𝐎𝐂𝐊* : ${blocked.length}\n‣ *𝐎𝐍𝐋𝐈𝐍𝐄* : ${kyun(uptime)}`, text, {
 
-  break
+  quoted: mek
+
+})
+
+break
+
 
 
 //---donasi
