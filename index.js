@@ -2116,6 +2116,7 @@ case 'ceksaldo':
 
 
 //--Info bot
+
 				case 'info':
 
   me = Pin.user
@@ -2150,24 +2151,24 @@ caption: teks, contextInfo: {
 					
 
 
-//--Info dono2
+//--Info dono
 				case 'dono':
 
   me = Pin.user
 
   uptime = process.uptime()
 
-  teks = `┣➢𝐍𝐎𝐌𝐄 𝐃𝐎 𝐃𝐎𝐍𝐎 : ANGELO
+  teks = `*‣ 𝐍𝐎𝐌𝐄 𝐃𝐎 𝐃𝐎𝐍𝐎 : ANGELO
 ──────────────────
-  ┣➢𝐍𝐔𝐌𝐄𝐑𝐎 𝐃𝐎 𝐃𝐎𝐍𝐎* : wa.me/556992482009
+  ‣ *𝐍𝐔𝐌𝐄𝐑𝐎 𝐃𝐎 𝐃𝐎𝐍𝐎* : wa.me/556992482009
 ──────────────────
-  ┣➢𝐃𝐎𝐍𝐎* : ☂︎𓇽𝐊𝐈𝐂𝐊-𝐀𝐒𝐒𓇽☂︎
+  ‣ *𝐃𝐎𝐍𝐎* : ☂︎𓇽𝐊𝐈𝐂𝐊-𝐀𝐒𝐒𓇽☂︎
 ──────────────────
-  ┣➢𝐏𝐑𝐄𝐅𝐈𝐗 * : ${prefix}
+  ‣ *𝐏𝐑𝐄𝐅𝐈𝐗 * : ${prefix}
 ──────────────────
-  ┣➢𝐂𝐓𝐓𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒* : ${blocked.length}
+  ‣ *𝐂𝐓𝐓𝐒 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎𝐒* : ${blocked.length}
 ──────────────────
-  ┣➢𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓 DO DONO* : ${totalchat.length}`
+  ‣ *𝐓𝐎𝐓𝐀𝐋 𝐂𝐇𝐀𝐓* : ${totalchat.length}`
 
   buffer = await getBuffer(me.imgUrl)
 
