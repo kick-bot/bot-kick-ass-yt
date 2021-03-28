@@ -2116,7 +2116,6 @@ case 'ceksaldo':
 
 
 //--Info bot
-
 				case 'info':
 
   me = Pin.user
@@ -2151,8 +2150,7 @@ caption: teks, contextInfo: {
 					
 
 
-//--Info dono
-
+//--Info dono2
 				case 'dono':
 
   me = Pin.user
